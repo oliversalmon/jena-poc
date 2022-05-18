@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3c.org/1999/02/22-rdf-syntx-ns#"
+xmlns:fo="http://www.finos.org/regtech#">
+
+
+<rdf:Description edf:ID="pra-liquidity">
+    <rdf:type rdf:resource=""/>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.finos.org/regtech/Disclosure(CRR)">
+    <fo:doc_issuer>Prudential Regulatory Authority</fo:doc_issuer>
+    <fo:content_subject_matter>CRR firms: UK banks, building societies, or investment firms subject to the EU Capital Requirements Regulation.</fo:content_subject_matter>
+    <fo:doc_title>Disclosure (CRR)</fo:doc_title>
+    <fo:content_body>test text</fo:content_body>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.finos.org/regtech/InternalLiquidityAdequacyAssessment">
+    <fo:doc_issuer>Prudential Regulatory Authority</fo:doc_issuer>
+    <fo:content_subject_matter>CRR firms: UK banks, building societies, or investment firms subject to the EU Capital Requirements Regulation.</fo:content_subject_matter>
+    <fo:doc_title>Internal Liquidity Adequacy Assessment</fo:doc_title>
+    <fo:content_body>test text</fo:content_body>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.finos.org/regtech/Interpretation">
+    <fo:doc_issuer>Prudential Regulatory Authority</fo:doc_issuer>
+    <fo:content_subject_matter>CRR firms: UK banks, building societies, or investment firms subject to the EU Capital Requirements Regulation.</fo:content_subject_matter>
+    <fo:doc_title>Interpretation</fo:doc_title>
+    <fo:content_body>test text</fo:content_body>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.finos.org/regtech/CRRFirms">
+    <fo:doc_issuer>Prudential Regulatory Authority</fo:doc_issuer>
+    <fo:content_subject_matter></fo:content_subject_matter>
+    <fo:doc_title>CRR firms: UK banks, building societies, or investment firms subject to the EU Capital Requirements Regulation.</fo:doc_title>
+    <fo:content_body>test text</fo:content_body>
+</rdf:Description>
+
+</rdf:RDF>
+
