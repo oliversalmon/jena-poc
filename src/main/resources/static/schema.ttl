@@ -1,0 +1,86 @@
+@prefix schema: <http://schema.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd1: <hhttp://www.w3.org/2001/XMLSchema#> .
+@prefix finos: <http://www.finos.org> .
+
+
+s@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix : <http://www.finos.org/> .
+
+
+:RegulatoryDocument a rdfs:Class .
+:DocIssuer rdf:type rdf:Property .
+:DocIssuer rdfs:range dc:creator  .
+:DocIssuer rdfs:domain :RegulatoryDocument .
+:ContentSubjectMattter rdf:type rdf:Property .
+:ContentSubjectMattter rdfs:range dc:description  .
+:ContentSubjectMattter rdfs:domain :RegulatoryDocument .
+:DocTitle rdf:type rdf:Property .
+:DocTitle rdfs:range dc:title  .
+:DocTitle rdfs:domain :RegulatoryDocument .
+:ContentLocation rdf:type rdf:Property .
+:ContentLocation rdfs:range xs:anyURI   .
+:ContentLocation rdfs:domain :RegulatoryDocument .
+:AppliesToInvestmentFirms rdf:type rdf:Property .
+:AppliesToInvestmentFirms rdfs:range rdf:Bag  .
+:AppliesToInvestmentFirms rdfs:domain :RegulatoryDocument .
+
+:InvestmentFirm rdf:type  rdfs:Class .
+:FirmName rdf:type rdf:Property .
+:FirmName rdf:range xs:string  .
+:FirmName rdf:domain :InvestmentFirm  .
+:FirmName rdf:domain :EURegulatedFI  .
+:FirmName rdf:domain :CreditInstitution  .
+:FirmLocation rdf:type rdf:Property .
+:FirmLocation rdf:range xs:string  .
+:FirmLocation rdf:domain :InvestmentFirm  .
+:FirmLocation rdf:domain :EURegulatedFI  .
+:FirmLocation rdf:domain :CreditInstitution  .
+
+:Regulator rdf:type rdfs:Class .
+:RegulatorName rdf:type rdf:Property .
+:RegulatorName rdf:range xs:string  .
+:RegulatorName rdf:domain :Regulator  .
+:RegulatorLocation rdf:type rdf:Property .
+:RegulatorLocation rdf:range xs:string  .
+:RegulatorLocation rdf:domain :Regulator  .
+:PublishedRegulation rdf:type rdf:Property .
+:PublishedRegulation rdf:range rdf:Bag .
+:PublishedRegulation rdf:domain :Regulator  .
+
+
+:EURegulatedFI rdf:type  rdfs:Class ;
+               rdfs:subClassOf :InvestmentFirm .
+
+:CreditInstitution rdf:type  rdfs:Class ;
+                   rdfs:subClassOf :EURegulatedFI .
+
+
+
+
+
+
+
+
+
