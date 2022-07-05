@@ -1,20 +1,25 @@
 package org.finos.regtech.sparqlserver;
 
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.io.File;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 
+@RequestMapping("/query")
 @RestController
 public class RegulationController {
-
+    //Feign Client
     FusekiClient fc;
-    @GetMapping()
-    public String sparqlQuery(String query){
-        return fc.sparqlQuery(query);
+
+
+    @PostMapping("/sparql/")
+    public ResponseEntity<String> sparqlQuery(@RequestBody String query){
+        return new ResponseEntity<>(fc.sparqlQuery(query), HttpStatus.OK);
+    }
+
+    @GetMapping("/alldata/")
+    public ResponseEntity<String> getAllData(){
+        return new ResponseEntity<>(fc.getAllData(), HttpStatus.OK);
     }
 
 }
